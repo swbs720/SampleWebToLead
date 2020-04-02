@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Please enter your ID and password"
-require valid-user
-AuthUserFile /app/public/.htpasswd
