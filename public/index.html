@@ -8,10 +8,9 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   </head>
   <script>
-    $(function(){
-      $("#submit").click(function(){
-        $('input:hidden[name="00N2w000004ZtnV"]').val(getNowDateWithString());
-      });
+    document.myform.submitbtn.addEventListener('click', function(){
+      alert("日付："+getNowDateWithString());
+      document.myform.submit();
     });
     function getNowDateWithString(){
       var dt = new Date();
@@ -42,7 +41,7 @@
           <!-- Web2ReadForm Box -->
           <div class="slds-box slds-m-around--small">
             <!-- Web to Read From -->
-            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="myform">
               
               <!-- Web to リード設定情報 -->
               <input type=hidden name="oid" value="00D2w000002CI4x">
@@ -158,7 +157,10 @@
               -->
 
               <div class="slds-m-top--small">
+                <!--
                 <input type="submit" name="submit" value="送信" class="slds-button slds-button--brand">
+                -->
+                <input type="button" name="submitbtn" value="送信" class="slds-button slds-button--brand">
               </div>
             </form>
           </div>
