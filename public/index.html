@@ -7,6 +7,21 @@
     <!-- Salesforce Web to Lead用 -->
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   </head>
+  <script>
+    $(function(){
+      $("#submit").click(function(){
+        $("00N2w000004ZtnV").text(getNowDateWithString());
+      });
+    });
+    function getNowDateWithString(){
+      var dt = new Date();
+      var y = dt.getFullYear();
+      var m = ("00" + (dt.getMonth()+1)).slice(-2);
+      var d = ("00" + dt.getDate()).slice(-2);
+      var result = y + "/" + m + "/" + d;
+      return result;
+    }
+  </script>
   <body>
     <div class="slds">
       <div class="slds-grid slds-wrap">
@@ -129,7 +144,8 @@
               </div>
               <!-- リードソース -->
               <input id="lead_source" name="lead_source" type="hidden" value="ホームページ" />
-
+              <!-- 見込顧客発生日 -->
+              <input id="00N2w000004ZtnV" name="00N2w000004ZtnV" size="12" type="hidden"/>
               <!--
               <label for="first_name">名</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
               <label for="last_name">姓</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
