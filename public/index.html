@@ -8,12 +8,6 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   </head>
   <script>
-    /*
-    document.myform..addEventListener('click', function(){
-      alert("日付："+getNowDateWithString());
-      document.myform.submit();
-    });
-    */
     function setDateValue(){
       document.getElementById('00N2w000004ZtnV').value = getNowDateWithString();
     }
@@ -150,17 +144,7 @@
               <input id="lead_source" name="lead_source" type="hidden" value="ホームページ" />
               <!-- 見込顧客発生日 -->
               <input id="00N2w000004ZtnV" name="00N2w000004ZtnV" size="12" type="hidden"/>
-              <!--
-              <label for="first_name">名</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-              <label for="last_name">姓</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-              <label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-              <label for="company">会社名</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-              <label for="city">市区郡</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-              <label for="state">都道府県</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
-              見込顧客発生日:<span class="dateInput dateOnlyInput">
-                <input id="00N2w000004ZtnV" name="00N2w000004ZtnV" size="12" type="text" value="ホームページ" /></span><br>
-              -->
-
+              
               <div class="slds-m-top--small">
                 <input type="submit" name="submit" value="送信" class="slds-button slds-button--brand">
               </div>
