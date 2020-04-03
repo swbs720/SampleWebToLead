@@ -8,7 +8,13 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
   </head>
   <script>
-    document.myform.submitbtn.addEventListener('click', function(){
+    /*
+    document.myform..addEventListener('click', function(){
+      alert("日付："+getNowDateWithString());
+      document.myform.submit();
+    });
+    */
+    document.myform.sbmtbtn.addEventListener('click', function(){
       alert("日付："+getNowDateWithString());
       document.myform.submit();
     });
@@ -160,7 +166,7 @@
                 <!--
                 <input type="submit" name="submit" value="送信" class="slds-button slds-button--brand">
                 -->
-                <input type="button" name="submitbtn" value="送信" class="slds-button slds-button--brand">
+                <input type="button" name="sbmtbtn" value="送信" class="slds-button slds-button--brand">
               </div>
             </form>
           </div>
