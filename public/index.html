@@ -14,10 +14,9 @@
       document.myform.submit();
     });
     */
-    document.myform.sbmtbtn.addEventListener('click', function(){
-      alert("日付："+getNowDateWithString());
-      document.myform.submit();
-    });
+    function setDateValue(){
+      document.getElementById('00N2w000004ZtnV').value = getNowDateWithString();
+    }
     function getNowDateWithString(){
       var dt = new Date();
       var y = dt.getFullYear();
@@ -47,7 +46,7 @@
           <!-- Web2ReadForm Box -->
           <div class="slds-box slds-m-around--small">
             <!-- Web to Read From -->
-            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" name="myform">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="setDateValue()" name="form1">
               
               <!-- Web to リード設定情報 -->
               <input type=hidden name="oid" value="00D2w000002CI4x">
@@ -163,10 +162,7 @@
               -->
 
               <div class="slds-m-top--small">
-                <!--
                 <input type="submit" name="submit" value="送信" class="slds-button slds-button--brand">
-                -->
-                <input type="button" name="sbmtbtn" value="送信" class="slds-button slds-button--brand">
               </div>
             </form>
           </div>
